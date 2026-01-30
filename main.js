@@ -1,5 +1,6 @@
 const generateBtn = document.getElementById("generate");
 const numbersDiv = document.getElementById("numbers");
+const themeToggleBtn = document.getElementById("theme-toggle");
 
 generateBtn.addEventListener("click", () => {
     const numbers = new Set();
@@ -12,4 +13,8 @@ generateBtn.addEventListener("click", () => {
         span.textContent = number;
         numbersDiv.appendChild(span);
     }
+});
+
+themeToggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
 });
